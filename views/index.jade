@@ -1,0 +1,257 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Nicholas Guerra Web Development
+    // Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/freelancer.css', rel='stylesheet')
+    // Custom Fonts
+    link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //
+      if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body#page-top.index
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#page-top') NG Design
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.hidden
+              a(href='#page-top')
+            li.page-scroll
+              a(href='#portfolio') Services
+            li.page-scroll
+              a(href='#about') About
+            li.page-scroll
+              a(href='#contact') Contact
+        // /.navbar-collapse
+      // /.container-fluid
+    // Header
+    header
+      .container
+        .row
+          .col-lg-12
+            img.img-responsive(src='img/nick2.gif', alt='', width='350')
+            .intro-text
+              span.name Nicholas Guerra
+              hr.star-light
+              span.skills Web Developer - Graphic Artist - User Experience Designer
+    // Portfolio Grid Section
+    section#portfolio
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 Services
+            hr.star-primary
+        .row
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/light-bulb.png', alt='')
+            h1.text-center Design
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/stopwatch.png', alt='')
+            h1.text-center Assistance
+          .col-sm-4.portfolio-item
+            a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
+              .caption
+                .caption-content
+                  i.fa.fa-search-plus.fa-3x
+              img.img-responsive(src='img/portfolio/wallet.png', alt='')
+            h1.text-center Payment
+    // About Section
+    section#about.success
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 About
+            hr.star-light
+        .row
+          .col-lg-4.col-lg-offset-2
+            p
+              | My name is Nicholas Guerra and I am a freelance web developer and graphic designer located in Orange County, CA. I am currently a student at Stanford Unviersity studying machine learning and data analysis to expand what I can offer to my clients. I am a believer in creating a living by doing what makes you happy and I strive to help others accomplish that goal through my work.
+          .col-lg-4
+            p
+              | Whether you are interested in creating an online store, mobile application, or if you just need some business cards, send me a message below for a free consultation.
+          .col-lg-8.col-lg-offset-2.text-center
+            a.btn.btn-lg.btn-outline(href='http://s000.tinyupload.com/download.php?file_id=53856275119687315176&t=5385627511968731517620629')
+              i.fa.fa-download
+              |  Download My Full Resume
+    // Contact Section
+    section#contact
+      .container
+        .row
+          .col-lg-12.text-center
+            h2 Hire Me
+            hr.star-primary
+        .row
+          .col-lg-8.col-lg-offset-2
+            // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+            // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+            form#contactForm(name='sentMessage', novalidate='')
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Name
+                  input#name.form-control(type='text', placeholder='Name', required='', data-validation-required-message='Please enter your name.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Email Address
+                  input#email.form-control(type='email', placeholder='Email Address', required='', data-validation-required-message='Please enter your email address.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Phone Number
+                  input#phone.form-control(type='tel', placeholder='Phone Number', required='', data-validation-required-message='Please enter your phone number.')
+                  p.help-block.text-danger
+              .row.control-group
+                .form-group.col-xs-12.floating-label-form-group.controls
+                  label Message
+                  textarea#message.form-control(rows='5', placeholder='Message', required='', data-validation-required-message='Please enter a message.')
+                  p.help-block.text-danger
+              br
+              #success
+              .row
+                .form-group.col-xs-12
+                  button.btn.btn-success.btn-lg(type='submit') Send
+    // Footer
+    footer.text-center
+      .footer-above
+        .container
+          .row
+            .footer-col.col-md-4
+              h3 Location
+              p
+                | Orange County
+                br
+                | Los Angeles
+            .footer-col.col-md-4
+              h3 Around the Web
+              ul.list-inline
+                li
+                  a.btn-social.btn-outline(href='https://www.facebook.com/NickGuerra30')
+                    i.fa.fa-fw.fa-facebook
+                li
+                  a.btn-social.btn-outline(href='https://www.instagram.com/nickg30')
+                    i.fa.fa-fw.fa-instagram
+                li
+                  a.btn-social.btn-outline(href='https://github.com/scriptthread')
+                    i.fa.fa-fw.fa-github
+                li
+                  a.btn-social.btn-outline(href='https://www.linkedin.com/in/nicholas-guerra-0b0614112')
+                    i.fa.fa-fw.fa-linkedin
+            .footer-col.col-md-4
+      .footer-below
+        .container
+          .row
+            .col-lg-12 Copyright © NG Design 2016
+    // Scroll to Top Button (Only visible on small and extra-small screen sizes)
+    .scroll-top.page-scroll.visible-xs.visible-sm
+      a.btn.btn-primary(href='#page-top')
+        i.fa.fa-chevron-up
+    // Portfolio Modals
+    #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                h2 Have An Idea?
+                hr.star-primary
+                img.img-responsive.img-centered(src='img/portfolio/light-bulb.png', alt='')
+                p
+                  | Need a website for your business? have an idea for the next big app? I provide services for business or personal including:
+                ul.list-inline
+                  li.h2
+                    |  Business Cards starting at: 
+                    strong $99
+                  li.h2
+                    |  Websites starting at: 
+                    strong $199
+                  li.h2
+                    |  Applications starting at: 
+                    strong $299
+                hr
+                button.btn.btn-default(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close
+    #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                h2 Personal Assistance
+                hr.star-primary
+                img.img-responsive.img-centered(src='img/portfolio/stopwatch.png', alt='')
+                p
+                  | Every project come with 6 months of 
+                  strong FREE
+                  |  technical support and customer service. If you have questions or need assistance in any way I will make provide a response within 24 hours!
+                hr
+                button.btn.btn-default(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close
+    #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-content
+        .close-modal(data-dismiss='modal')
+          .lr
+            .rl
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .modal-body
+                h2 Pay Your Way
+                hr.star-primary
+                img.img-responsive.img-centered(src='img/portfolio/wallet.png', alt='')
+                p
+                  | I accept almost all forms of payment: credit, debit, paypal and cash are all acceptable forms of payment and finance plans are negotiable.
+                hr 
+                button.btn.btn-default(type='button', data-dismiss='modal')
+                  i.fa.fa-times
+                  |  Close
+    // jQuery
+    script(src='js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='js/classie.js')
+    script(src='js/cbpAnimatedHeader.js')
+    // Contact Form JavaScript
+    script(src='js/jqBootstrapValidation.js')
+    script(src='js/contact_me.js')
+    // Custom Theme JavaScript
+    script(src='js/freelancer.js')
